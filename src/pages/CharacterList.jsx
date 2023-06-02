@@ -4,21 +4,24 @@ import CardComponent from '../components/Card/CardComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CharacterList = () => {
-    const [characters,
-        setCharacters] = useState([]);
-
+    const [characters, setCharacters] = useState([]);
     useEffect(() => {
-        const fetchData = async() => {
-            try {
-                const response = await axios.get('https://rickandmortyapi.com/api/character');
-                setCharacters(response.data.results);
-            } catch (error) {
-                console.log('Error fetching data:', error);
-            }
-        };
-
-        fetchData();
+        fetchData("https://rickandmortyapi.com/api/character");
     }, []);
+
+    const fetchData = async(url) => {
+        const res = await fetch(url);
+        const data = await res.json();
+        setCharacters((_characters) => {
+            return [
+                ..._characters,
+                ...data.results
+            ];
+        });
+        if (data.info && data.info.next) {
+            fetchData(data.info.next);
+        }
+    };
 
     return (
         <div className="container mt-3">
