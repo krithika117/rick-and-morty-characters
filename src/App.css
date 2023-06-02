@@ -22,6 +22,17 @@ h6 {
     text-align: left;
 }
 
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black h5,
+.bg-black h6 {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+}
+
 .card {
     text-align: left;
 }

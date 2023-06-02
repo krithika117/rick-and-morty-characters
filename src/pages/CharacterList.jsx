@@ -52,7 +52,7 @@ const CharacterList = () => {
           {theme.isDarkMode ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
         </button>
       </div>
-      <h1 className="mb-2 fw-bolder">Rick and Morty Characters</h1>
+      <h1 className={`mb-2 fw-bolder ${theme.isDarkMode ? 'text-white' : 'text-black'}`}>Rick and Morty Characters</h1>
       <div className="my-4">
         <input
           type="text"
