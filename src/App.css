@@ -8,7 +8,7 @@
 
 .card-img {
     width: 12rem !important;
-    object-fit: cover;
+    object-fit: cover!important;
 }
 
 h1,

@@ -22,13 +22,13 @@ const CardComponent = ({character}) => {
             className="card shadow mb-3 mx-0 d-flex flex-row align-items-center">
             <img src={character.image} className="card-img" alt={character.name}/>
             <div className="card-body">
-                <h3 className="card-title fw-bolder">{character.name}</h3>
+                <h4 className="card-title fw-bolder">{character.name}</h4>
                 <div className="d-flex align-items-center">
-                    <div className={`rounded-circle me-2 ${statusColorClass} small`}></div>
+                    <div className={`rounded-circle me-2 ${statusColorClass} `}></div>
                     {character.status} - {character.species}
                 </div>
-                <div className="d-flex align-items-center small fw-normal">
-                    <div className="small">
+                <div className="d-flex align-items-center fw-normal">
+                    <div className="">
                         Last known location: {character.location.name}
                     </div>
                 </div>

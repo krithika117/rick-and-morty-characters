@@ -19,7 +19,7 @@ const CharacterList = () => {
     return response.data.results;
   };
 
-  const { data: characters, status } = useQuery('characters', fetchData);
+  const { data, status } = useQuery('characters', fetchData);
 
   if (status === 'loading') {
     return <Spinner/>;
@@ -41,7 +41,7 @@ const CharacterList = () => {
     }
   };
 
-  const charactersToDisplay = searchTerm ? searchResults : characters;
+  const charactersToDisplay = searchTerm ? searchResults : data;
 
   return (
     <div className="container my-3">
