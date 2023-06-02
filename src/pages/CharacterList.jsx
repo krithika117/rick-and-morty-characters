@@ -46,7 +46,7 @@ const CharacterList = () => {
   const charactersToDisplay = searchTerm ? searchResults : data.results;
 
   return (
-    <div className="container my-3">
+    <div className="container my-3 ">
       <div className="d-flex justify-content-end mb-3">
         <button className="btn border-0 bg-transparent" onClick={theme.toggleTheme}>
           {theme.isDarkMode ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}

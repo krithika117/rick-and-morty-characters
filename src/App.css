@@ -2,13 +2,13 @@
 
 .App {
     font-family: 'Geologica', sans-serif;
-    overflow-x:hidden;
+    overflow-x: hidden;
 
 }
 
 .card-img {
-    margin:0;
-    max-width:40%;
+    margin: 0;
+    max-width: 40%;
     object-fit: fill!important;
 }
 
@@ -34,4 +34,15 @@ h6 {
     width: 10px !important;
     height: 10px !important;
 }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}

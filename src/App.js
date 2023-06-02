@@ -7,7 +7,7 @@ const queryClient = new QueryClient()
 function App() {
     return (
         <ThemeProvider>
-            <div className="App">
+            <div className="App fade-in">
                 <header className="App-header">
                     <QueryClientProvider client={queryClient}>
                         <CharacterListComponent/>
