@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import CardComponent from '../components/Card/CardComponent';
@@ -56,7 +56,7 @@ const CharacterList = () => {
       <div className="my-4">
         <input
           type="text"
-          className="form-control"
+          className={`form-control ${theme.isDarkMode ? 'bg-black' : 'bg-white shadow-sm'}`}
           placeholder="Search characters"
           value={searchTerm}
           onChange={handleSearch}
