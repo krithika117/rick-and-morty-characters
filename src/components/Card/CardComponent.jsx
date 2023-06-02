@@ -19,7 +19,7 @@ const CardComponent = ({character}) => {
 
     return (
         <div
-            className="card text-white bg-dark mb-3 d-flex flex-row align-items-center">
+            className="card shadow mb-3 d-flex flex-row align-items-center">
             <img src={character.image} className="card-img" alt={character.name}/>
             <div className="card-body">
                 <h3 className="card-title fw-bolder">{character.name}</h3>

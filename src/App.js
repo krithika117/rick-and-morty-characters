@@ -1,15 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import CharacterListComponent from './pages/CharacterList';
+import ThemeProvider from './providers/ThemeProvider';
 
 function App() {
-
     return (
-        <div className="App">
-            <header className="App-header">
-                <CharacterListComponent/>
-            </header>
-        </div>
+        <ThemeProvider>
+            <div className="App">
+                <header className="App-header">
+                    <CharacterListComponent/>
+                </header>
+            </div>
+        </ThemeProvider>
+
     );
 }
 
