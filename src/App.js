@@ -1,13 +1,17 @@
 import './App.css';
 import CharacterListComponent from './pages/CharacterList';
 import ThemeProvider from './providers/ThemeProvider';
+import {QueryClient, QueryClientProvider} from 'react-query'
 
+const queryClient = new QueryClient()
 function App() {
     return (
         <ThemeProvider>
             <div className="App">
                 <header className="App-header">
-                    <CharacterListComponent/>
+                    <QueryClientProvider client={queryClient}>
+                        <CharacterListComponent/>
+                    </QueryClientProvider>
                 </header>
             </div>
         </ThemeProvider>
