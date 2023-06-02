@@ -7,8 +7,9 @@
 }
 
 .card-img {
-    width: 12rem !important;
-    object-fit: cover!important;
+    margin:0;
+    max-width:40%;
+    object-fit: fill!important;
 }
 
 h1,
@@ -20,6 +21,7 @@ h6 {
     font-weight: 700;
     text-align: left;
 }
+
 .card {
     text-align: left;
 }
